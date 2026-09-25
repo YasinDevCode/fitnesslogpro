@@ -1,6 +1,6 @@
-import { Dumbbell } from "lucide-react";
+import {Dumbbell} from "lucide-react";
 
-export default function Footer() {
+export default function Footer(){
   return (
     <footer className="mt-20 border-t border-[#20252e] bg-[#0d0f13]">
       <div className="container-fitlog flex min-h-[100px] flex-col items-center justify-between gap-4 py-6 md:flex-row">

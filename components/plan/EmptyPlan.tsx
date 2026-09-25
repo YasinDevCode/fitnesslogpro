@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-export default function EmptyPlan() {
+export default function EmptyPlan(){
   return (
     <div className="flex min-h-[300px] flex-col items-center justify-center rounded-2xl border border-dashed border-[#303742] bg-[#101217] p-8 text-center">
 

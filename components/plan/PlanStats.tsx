@@ -1,8 +1,8 @@
 "use client";
 
-import { useFitLog } from "@/context/FitLogContext";
+import {useFitLog} from "@/context/FitLogContext";
 
-export default function PlanStats() {
+export default function PlanStats(){
   const { plan } = useFitLog();
 
   const minutes = plan.reduce(

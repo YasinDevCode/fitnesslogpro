@@ -1,4 +1,4 @@
-interface Props {
+interface Props{
   label: string;
   value: string | number;
 }
@@ -6,7 +6,7 @@ interface Props {
 export default function SpecRow({
   label,
   value,
-}: Props) {
+}: Props){
   return (
     <div className="flex items-center justify-between border-b border-[#242a34] px-5 py-4 last:border-b-0">
       <span className="text-xs font-bold uppercase tracking-wide text-[#8c95a3]">

@@ -94,7 +94,7 @@ export default function PlanWorkoutCard({
           View Details
         </Link>
 
-        {type === "plan" && (
+        {type === "plan" &&(
           <button
             onClick={() =>
               markAsDone(workout.id)

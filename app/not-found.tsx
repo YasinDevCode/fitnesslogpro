@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-export default function NotFound() {
+export default function NotFound(){
   return (
     <section className="container-fitlog flex min-h-[70vh] items-center justify-center text-center">
 

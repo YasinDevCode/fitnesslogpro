@@ -1,24 +1,24 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import {useEffect, useState} from "react";
 import WorkoutCard from "./WorkoutCard";
 import Loading from "@/components/ui/Loading";
-import { Workout } from "@/types/workout";
-import { getWorkouts } from "@/lib/api";
+import {Workout} from "@/types/workout";
+import {getWorkouts} from "@/lib/api";
 
-export default function WorkoutLibrary() {
+export default function WorkoutLibrary(){
   const [workouts, setWorkouts] = useState<Workout[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
 
   useEffect(() => {
-    async function loadWorkouts() {
+    async function loadWorkouts(){
       try {
         const data = await getWorkouts();
         setWorkouts(data);
-      } catch {
+      } catch{
         setError("Failed to load workouts.");
-      } finally {
+      } finally{
         setLoading(false);
       }
     }
@@ -26,7 +26,7 @@ export default function WorkoutLibrary() {
     loadWorkouts();
   }, []);
 
-  return (
+  return(
     <section
       id="library"
       className="container-fitlog scroll-mt-24 py-16"
@@ -49,9 +49,9 @@ export default function WorkoutLibrary() {
         </div>
       )}
 
-      {!loading && !error && (
+      {!loading && !error &&(
         <div className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
-          {workouts.map((workout) => (
+          {workouts.map((workout)=>(
             <WorkoutCard
               key={workout.id}
               workout={workout}

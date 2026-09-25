@@ -1,8 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowDown } from "lucide-react";
+import { ArrowDown }from "lucide-react";
 
-export default function Hero() {
+export default function Hero(){
   return (
     <section className="container-fitlog pt-8">
       <div className="overflow-hidden rounded-2xl border border-[#29303b] bg-[#14171d]">

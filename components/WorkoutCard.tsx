@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-interface Workout {
+interface Workout{
   id: number;
   name: string;
   image: string;
@@ -17,11 +17,11 @@ interface Workout {
   instructions: string[];
 }
 
-interface WorkoutCardProps {
+interface WorkoutCardProps{
   workout: Workout;
 }
 
-export default function WorkoutCard({ workout }: WorkoutCardProps) {
+export default function WorkoutCard({ workout }: WorkoutCardProps){
   return (
     <article className="group overflow-hidden rounded-xl border border-[#242832] bg-[#11141a] transition duration-300 hover:-translate-y-1 hover:border-[#ccff00]">
       {/* Image */}

@@ -1,6 +1,6 @@
 import WorkoutDetails from "@/components/workout/WorkoutDetails";
 
-interface WorkoutDetailsPageProps {
+interface WorkoutDetailsPageProps{
   params: Promise<{
     id: string;
   }>;
@@ -8,8 +8,8 @@ interface WorkoutDetailsPageProps {
 
 export default async function WorkoutDetailsPage({
   params,
-}: WorkoutDetailsPageProps) {
+}: WorkoutDetailsPageProps){
   const { id } = await params;
 
-  return <WorkoutDetails id={id} />;
+  return <WorkoutDetails id={id}/>;
 }

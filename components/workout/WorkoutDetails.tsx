@@ -2,28 +2,28 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import {
+import{
   ArrowLeft,
   Bookmark,
   CalendarPlus,
 } from "lucide-react";
 
-import { useEffect, useState } from "react";
+import {useEffect, useState} from "react";
 
-import { Workout } from "@/types/workout";
+import {Workout} from "@/types/workout";
 import { getWorkout } from "@/lib/api";
 import { useFitLog } from "@/context/FitLogContext";
 
 import SpecRow from "./SpecRow";
 import Loading from "@/components/ui/Loading";
 
-interface Props {
+interface Props{
   id: string;
 }
 
 export default function WorkoutDetails({
   id,
-}: Props) {
+}: Props){
   const [workout, setWorkout] = useState<Workout | null>(
     null
   );
@@ -39,7 +39,7 @@ export default function WorkoutDetails({
   } = useFitLog();
 
   useEffect(() => {
-    async function loadWorkout() {
+    async function loadWorkout(){
       try {
         const data = await getWorkout(id);
         setWorkout(data);

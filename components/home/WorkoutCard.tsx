@@ -1,18 +1,18 @@
 import Image from "next/image";
 import Link from "next/link";
-import {
+import{
   Clock3,
   Flame,
   Star,
 } from "lucide-react";
 
-import { Workout } from "@/types/workout";
+import {Workout} from "@/types/workout";
 
-interface Props {
+interface Props{
   workout: Workout;
 }
 
-export default function WorkoutCard({ workout }: Props) {
+export default function WorkoutCard({ workout }: Props){
   return (
     <Link
       href={`/workout/${workout.id}`}
@@ -31,7 +31,7 @@ export default function WorkoutCard({ workout }: Props) {
       <div className="p-4">
 
         <div className="mb-3 flex flex-wrap gap-2">
-          {workout.muscleGroups.map((group) => (
+          {workout.muscleGroups.map((group)=>(
             <span
               key={group}
               className="rounded-full bg-[#ccff00] px-3 py-1 text-[10px] font-black uppercase text-black"

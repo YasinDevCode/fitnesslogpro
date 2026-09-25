@@ -1,4 +1,4 @@
-interface Props {
+interface Props{
   active: "plan" | "saved";
   onChange: (value: "plan" | "saved") => void;
 }
@@ -6,7 +6,7 @@ interface Props {
 export default function PlanTabs({
   active,
   onChange,
-}: Props) {
+}: Props){
   return (
     <div className="flex w-fit rounded-lg border border-[#29303b] bg-[#14171d] p-1">
 

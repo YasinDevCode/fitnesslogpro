@@ -10,7 +10,7 @@ import PlanWorkoutCard from "@/components/plan/PlanWorkoutCard";
 import EmptyPlan from "@/components/plan/EmptyPlan";
 import SortDropdown from "@/components/ui/SortDropdown";
 
-export default function MyPlanPage() {
+export default function MyPlanPage(){
   const {
     plan,
     saved,
@@ -24,18 +24,18 @@ export default function MyPlanPage() {
       "duration" | "calories" | "rating"
     >("duration");
 
-  const currentList = useMemo(() => {
+  const currentList = useMemo(()=>{
     const list =
       activeTab === "plan"
         ? [...plan]
         : [...saved];
 
-    return list.sort((a, b) => {
+    return list.sort((a, b)=>{
       if (sortBy === "duration") {
         return a.duration - b.duration;
       }
 
-      if (sortBy === "calories") {
+      if (sortBy === "calories"){
         return a.caloriesBurned - b.caloriesBurned;
       }
 
@@ -61,7 +61,7 @@ export default function MyPlanPage() {
       {/* Stats */}
       <PlanStats />
 
-      {/* Controls */}
+      {/*Controls*/}
       <div className="mt-8 flex flex-col justify-between gap-4 md:flex-row md:items-center">
 
         <PlanTabs
@@ -79,7 +79,7 @@ export default function MyPlanPage() {
       {/* List */}
       <div className="mt-6 space-y-4">
 
-        {currentList.length === 0 ? (
+        {currentList.length === 0?(
           <EmptyPlan />
         ) : (
           currentList.map((workout) => (

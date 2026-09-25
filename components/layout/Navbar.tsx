@@ -2,14 +2,14 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useFitLog } from "@/context/FitLogContext";
+import {useFitLog} from "@/context/FitLogContext";
 
-export default function Navbar() {
-  const { plan, saved } = useFitLog();
+export default function Navbar(){
+  const { plan, saved} = useFitLog();
   const planCount = plan.length;
   const savedCount = saved.length;
 
-  return (
+  return(
     <header className="sticky top-0 z-50 border-b border-[#242832] bg-[#090b0f]/95 backdrop-blur">
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 md:px-8 lg:px-12">
 
@@ -48,7 +48,7 @@ export default function Navbar() {
           >
             My Plan
 
-            {planCount > 0 && (
+            {planCount> 0 &&(
               <span className="flex h-5 min-w-5 items-center justify-center rounded-full bg-[#ccff00] px-1.5 text-[10px] font-black text-black">
                 {planCount}
               </span>
@@ -61,7 +61,7 @@ export default function Navbar() {
           >
             Saved
 
-            {savedCount > 0 && (
+            {savedCount > 0 &&(
               <span className="flex h-5 min-w-5 items-center justify-center rounded-full bg-[#ccff00] px-1.5 text-[10px] font-black text-black">
                 {savedCount}
               </span>
@@ -77,7 +77,7 @@ export default function Navbar() {
         >
           My Plan
 
-          {planCount > 0 && (
+          {planCount > 0 &&(
             <span className="flex h-5 min-w-5 items-center justify-center rounded-full bg-[#ccff00] px-1.5 text-[10px] font-black text-black">
               {planCount}
             </span>

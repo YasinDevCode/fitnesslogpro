@@ -1,7 +1,7 @@
-export function formatMinutes(minutes: number) {
+export function formatMinutes(minutes: number){
   return `${minutes} min`;
 }
 
-export function formatCalories(calories: number) {
+export function formatCalories(calories: number){
   return `${calories} kcal`;
 }

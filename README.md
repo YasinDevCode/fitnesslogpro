@@ -49,3 +49,4 @@ The application works across:
 ```bash
 npm install
 npm run dev
+# fitnesslogpro
